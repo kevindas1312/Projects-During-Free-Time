@@ -2,14 +2,14 @@
 #include <vector>
 using namespace std;
 
-void greet(){
+void greet(){ //introduction OR greet function
     cout <<"=============\n";
     cout << "UFO: The Game\n";
     cout << "=============\n";
     cout << "Instructions: save your friend from alien abduction by guessing the letters in the codeword.\n\n";
 }
 
-void end_game(string answer, string codeword){
+void end_game(string answer, string codeword){ //function that has IF selection to determine if the user was able to determine the characters in keyword
     if (answer == codeword) {
         cout << "Hooray! You saved your friend and earned a medal of honor!\n";
     } 
@@ -18,7 +18,7 @@ void end_game(string answer, string codeword){
     }
 }
 
-void display_status(vector <char> incorrect, string answer){
+void display_status(vector <char> incorrect, string answer){ //function used to return the characters of incorrect guesses
     cout << "Incorrect guesses: \t";
     for(int i=0; i<incorrect.size();i++){
         cout << incorrect[i] << " ";
@@ -30,7 +30,7 @@ void display_status(vector <char> incorrect, string answer){
     }
 }
 
-void display_misses(int misses){
+void display_misses(int misses){ //tried to use ASCII art to display number of misses(abit stuck here)
     cout<< "\n__    __                          __                                             ______                       __                                         \n";
     cout<<"|  |  |  |                       |  |                                           /      |                     |  |                                        \n";
     cout<<"| $$| | $$ __    __  ______ ____  | $$____    ______    ______          ______  |  $$$$$$|      ______ ____   |$$  _______   _______   ______    _______ \n";
